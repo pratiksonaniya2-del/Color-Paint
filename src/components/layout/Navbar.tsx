@@ -14,6 +14,8 @@ import {
   Palette,
   ArrowUpRight,
   ArrowRight,
+  Phone,
+  Mail,
 } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 
@@ -223,28 +225,58 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/90 bg-white">
+      {/* Top Contact & Announcement Bar */}
+      <div className="border-b border-slate-100 bg-slate-900 py-1.5 px-4 text-[11px] text-slate-300 sm:px-6 xl:px-10">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="font-semibold text-amber-400">आशीर्वाद हार्डवेयर एंड पेंट हाउस</span>
+            <span className="hidden sm:inline text-slate-600">•</span>
+            <span className="hidden sm:inline text-slate-400 font-medium">आपके घर की सजावट का विश्वसनीय साथी</span>
+          </div>
+
+          <div className="flex items-center gap-4 text-xs font-medium">
+            <a
+              href="tel:+919669348842"
+              className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+            >
+              <Phone className="h-3 w-3 text-amber-400" />
+              <span>+91 96693 48842</span>
+            </a>
+
+            <a
+              href="mailto:raisatyam78@gmail.com"
+              className="hidden md:inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+            >
+              <Mail className="h-3 w-3 text-amber-400" />
+              <span>raisatyam78@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 xl:px-10">
-        <div className="grid min-h-[76px] grid-cols-[1fr_auto] items-center gap-x-4 gap-y-3 py-3 lg:grid-cols-[220px_minmax(240px,1fr)_auto] lg:gap-x-8 lg:py-0">
+        <div className="grid min-h-[76px] grid-cols-[1fr_auto] items-center gap-x-4 gap-y-3 py-3 lg:grid-cols-[auto_minmax(240px,1fr)_auto] lg:gap-x-8 lg:py-0">
           <Link
             href="/"
-            aria-label="ColorHub home"
+            aria-label="आशीर्वाद हार्डवेयर एंड पेंट हाउस"
             className="group flex w-fit min-w-0 items-center gap-3"
             onClick={closeMobileMenu}
           >
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[14px] bg-amber-700 text-white shadow-sm transition-colors group-hover:bg-amber-800">
-              <Palette
-                className="h-[21px] w-[21px]"
-                strokeWidth={1.8}
+            <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-500/30 shadow-xs transition-transform group-hover:scale-105 bg-white">
+              <img
+                src="/aashirwad-logo.jpg"
+                alt="आशीर्वाद हार्डवेयर एंड पेंट हाउस Logo"
+                className="h-full w-full object-cover"
               />
-            </span>
+            </div>
 
             <span className="min-w-0">
-              <span className="block text-[21px] font-extrabold leading-6 tracking-[-0.055em] text-slate-950">
-                Color<span className="text-amber-700">Hub</span>
+              <span className="block text-[18px] sm:text-[21px] font-black leading-tight tracking-tight text-slate-950">
+                आशीर्वाद <span className="text-amber-700">पेंट हाउस</span>
               </span>
 
-              <span className="mt-1 block whitespace-nowrap text-[9px] font-semibold uppercase leading-none tracking-[0.13em] text-slate-500">
-                Luxury paints &amp; decor
+              <span className="mt-0.5 block whitespace-nowrap text-[9px] sm:text-[10px] font-semibold uppercase leading-none tracking-wider text-slate-500">
+                हार्डवेयर एंड पेंट हाउस
               </span>
             </span>
           </Link>
@@ -378,6 +410,16 @@ export default function Navbar() {
               Shade Cards
             </a>
           </nav>
+
+          <div className="flex items-center gap-2">
+            <a
+              href="tel:+919669348842"
+              className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900 border border-amber-200 hover:bg-amber-100 transition-colors"
+            >
+              <Phone className="h-3.5 w-3.5 text-amber-700" />
+              <span>9669348842</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -461,6 +503,29 @@ export default function Navbar() {
                 5 PDFs
               </span>
             </a>
+
+            <div className="mt-4 pt-3 border-t border-slate-200/80 space-y-2">
+              <a
+                href="tel:+919669348842"
+                onClick={closeMobileMenu}
+                className="flex items-center justify-between rounded-xl bg-amber-50 px-3.5 py-2.5 text-xs font-bold text-amber-900 border border-amber-200/80"
+              >
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-amber-700" />
+                  <span>Call: 9669348842</span>
+                </div>
+                <span className="text-[10px] uppercase font-semibold text-amber-700">Direct</span>
+              </a>
+
+              <a
+                href="mailto:raisatyam78@gmail.com"
+                onClick={closeMobileMenu}
+                className="flex items-center gap-2 rounded-xl bg-slate-50 px-3.5 py-2.5 text-xs font-medium text-slate-700 border border-slate-200/80 hover:bg-slate-100"
+              >
+                <Mail className="h-4 w-4 text-slate-500" />
+                <span className="truncate">raisatyam78@gmail.com</span>
+              </a>
+            </div>
           </nav>
         </div>
       )}

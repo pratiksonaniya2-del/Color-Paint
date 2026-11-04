@@ -160,7 +160,7 @@ export default function RoomVisualizer() {
     setTimeout(() => {
       // Create quick download trigger
       const link = document.createElement('a');
-      link.download = `ColorHub-${currentColor.name.replace(/\s+/g, '_')}-preview.jpg`;
+      link.download = `Aashirwad-${currentColor.name.replace(/\s+/g, '_')}-preview.jpg`;
       link.href = currentDisplayImage;
       link.click();
       showToast('Visualisation downloaded successfully!', 'success');

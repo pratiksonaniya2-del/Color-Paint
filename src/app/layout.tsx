@@ -15,11 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'ColorHub - Luxury Paint Shop & Room Colour Visualizer',
+  title: 'आशीर्वाद हार्डवेयर एंड पेंट हाउस | Aashirwad Hardware & Paint House',
   description:
-    'Explore premium paint shades from Asian Paints, Berger, Dulux, Nerolac, JSW & Indigo. Test wall colours live on your room photos with our interactive visualizer.',
+    'आशीर्वाद हार्डवेयर एंड पेंट हाउस - आपके घर की सजावट का विश्वसनीय साथी। Premium paints from Asian Paints, Berger, Dulux, Nerolac, JSW & Indigo. Contact: 9669348842, raisatyam78@gmail.com.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/aashirwad-logo.jpg',
+    apple: '/aashirwad-logo.jpg',
   },
 };
 

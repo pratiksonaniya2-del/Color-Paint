@@ -14,25 +14,42 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand info */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center text-white font-bold">
-                <Palette className="w-5 h-5" />
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-amber-500/40 bg-white shrink-0 shadow-sm">
+                <img
+                  src="/aashirwad-logo.jpg"
+                  alt="आशीर्वाद हार्डवेयर एंड पेंट हाउस"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="text-xl font-extrabold text-white">
-                Color<span className="text-amber-500">Hub</span>
-              </span>
+              <div>
+                <span className="text-xl font-extrabold text-white block leading-tight">
+                  आशीर्वाद <span className="text-amber-500">पेंट हाउस</span>
+                </span>
+                <span className="text-[11px] text-amber-400 font-semibold block tracking-wide">
+                  हार्डवेयर एंड पेंट हाउस
+                </span>
+              </div>
             </div>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              India's premier architectural paint studio and authorized distributor for Asian Paints, Berger, Dulux, Nerolac, JSW and Indigo paints. Transform your home with precision tinting and professional finish warranties.
+              आपके घर की सजावट का विश्वसनीय साथी। Authorized distributor for Asian Paints, Berger, Dulux, Nerolac, JSW and Indigo paints with premium hardware, tinting and wall finishes.
             </p>
-            <div className="pt-2 text-xs text-slate-400 space-y-2">
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-amber-500" />
-                <span>+91 1800 212 9900 (Toll Free)</span>
+            <div className="pt-2 text-xs text-slate-400 space-y-2.5">
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center text-amber-400 shrink-0">
+                  <Phone className="w-3.5 h-3.5" />
+                </div>
+                <a href="tel:+919669348842" className="hover:text-amber-400 transition-colors font-medium">
+                  +91 96693 48842
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-amber-500" />
-                <span>care@colorhubpaints.in</span>
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center text-amber-400 shrink-0">
+                  <Mail className="w-3.5 h-3.5" />
+                </div>
+                <a href="mailto:raisatyam78@gmail.com" className="hover:text-amber-400 transition-colors font-medium">
+                  raisatyam78@gmail.com
+                </a>
               </div>
             </div>
           </div>
@@ -82,7 +99,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 ColorHub Paints Ltd. All rights reserved.</p>
+          <p>© 2026 आशीर्वाद हार्डवेयर एंड पेंट हाउस (Aashirwad Hardware &amp; Paint House). All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>

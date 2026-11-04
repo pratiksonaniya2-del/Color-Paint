@@ -57,16 +57,20 @@ export default function AdminLoginPage() {
     <main className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-10">
       <section className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
         <div className="mb-8 flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500 text-white">
-            <Palette className="h-6 w-6" />
+          <div className="h-14 w-14 overflow-hidden rounded-2xl ring-2 ring-amber-500/30 bg-white shrink-0 shadow-xs">
+            <img
+              src="/aashirwad-logo.jpg"
+              alt="आशीर्वाद हार्डवेयर एंड पेंट हाउस Logo"
+              className="h-full w-full object-cover"
+            />
           </div>
 
           <div>
-            <h1 className="text-xl font-extrabold text-slate-900">
-              ColorHub Admin
+            <h1 className="text-lg font-extrabold text-slate-900 leading-tight">
+              आशीर्वाद हार्डवेयर एंड पेंट हाउस
             </h1>
-            <p className="text-sm text-slate-500">
-              Manage your paint catalogue
+            <p className="text-xs text-slate-500">
+              Admin Management Portal
             </p>
           </div>
         </div>
@@ -93,7 +97,7 @@ export default function AdminLoginPage() {
               maxLength={254}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              placeholder="Enter admin email"
+              placeholder="raisatyam78@gmail.com"
               className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-100"
             />
           </div>

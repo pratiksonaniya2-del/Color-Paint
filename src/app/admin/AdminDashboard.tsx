@@ -340,12 +340,16 @@ async function handleLogout() {
       <aside className="flex w-full shrink-0 flex-col bg-slate-900 text-slate-300 md:w-64">
         <div className="flex items-center justify-between border-b border-slate-800 p-6">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500 text-white">
-              <Palette className="h-4 w-4" />
+            <div className="h-8 w-8 overflow-hidden rounded-full ring-1 ring-amber-500/40 bg-white shrink-0">
+              <img
+                src="/aashirwad-logo.jpg"
+                alt="Logo"
+                className="h-full w-full object-cover"
+              />
             </div>
 
-            <span className="text-lg font-extrabold text-white">
-              Color<span className="text-amber-500">Hub</span>
+            <span className="text-base font-extrabold text-white">
+              आशीर्वाद <span className="text-amber-500">पेंट</span>
             </span>
           </Link>
 
