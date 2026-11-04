@@ -212,10 +212,10 @@ export async function GET() {
       );
 
       const seed = INITIAL_COLORS.filter(
-        (color) => color.brand === "Asian Paints"
+        (color) => color.brand === "Asian Paints" || color.brand === "Birla Opus"
       ).map((color) => ({
         ...color,
-        brand: brandByName.get("Asian Paints"),
+        brand: brandByName.get(color.brand),
         category: normalizeCategory(color.category),
       }));
 

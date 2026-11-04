@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useStore } from '@/context/StoreContext';
 import { PaintColor, PaintFinish } from '@/types';
 import { X, ArrowLeft } from 'lucide-react';
+import { INITIAL_BRANDS } from '@/data/initialData';
 
 interface Props {
   colorToEdit?: PaintColor;
@@ -57,7 +58,7 @@ export default function AdminAddColorModal({
     showToast,
   } = useStore();
 
-  const availableBrands = brands as BrandOption[];
+  const availableBrands = (brands.length > 0 ? brands : INITIAL_BRANDS) as BrandOption[];
 
   const existingBrandId = (() => {
     const color = colorToEdit as any;

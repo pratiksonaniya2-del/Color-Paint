@@ -23,7 +23,7 @@ const HERO_SLIDES = [
     title: 'Warm Architectural Neutrals for Modern Living',
     subtitle: 'Timeless tones that reflect natural sunlight and complement contemporary wooden furnishings.',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
-    accentShade: 'Warm Beige • BRG-112',
+    accentShade: 'Warm Beige • BO-112',
     accentHex: '#D5C4A1',
   },
 ];

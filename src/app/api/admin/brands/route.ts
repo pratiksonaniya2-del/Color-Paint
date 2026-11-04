@@ -10,6 +10,7 @@ export const runtime = "nodejs";
 export async function GET() {
   try {
     await connectDB();
+    await ensureDefaultBrands();
 
     const brands = await Brand.find().sort({ name: 1 }).lean();
 

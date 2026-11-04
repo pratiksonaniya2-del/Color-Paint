@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { useStore } from '@/context/StoreContext';
 import { PaintCategory, PaintBrand, PaintFinish, PaintColor } from '@/types';
 import { Heart, Sparkles, Eye, RotateCcw, Filter, ChevronDown, Check } from 'lucide-react';
+import { INITIAL_BRANDS } from '@/data/initialData';
 
 interface Props {
   selectedBrand: PaintBrand | 'All';
@@ -30,6 +31,8 @@ export default function ColourExplorer({ selectedBrand, onSelectBrand }: Props) 
     toggleWishlist,
     isWishlisted,
   } = useStore();
+
+  const displayBrands = brands.length > 0 ? brands : INITIAL_BRANDS;
 
   const [activeCategory, setActiveCategory] = useState<'All' | PaintCategory>('All');
   const [selectedFinishes, setSelectedFinishes] = useState<PaintFinish[]>([]);
@@ -159,7 +162,7 @@ export default function ColourExplorer({ selectedBrand, onSelectBrand }: Props) 
                   />
                   <span>All Brands</span>
                 </label>
-                {brands.map((brand) => (
+                {displayBrands.map((brand) => (
                   <label
                     key={brand.id || brand.name}
                     className="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer"

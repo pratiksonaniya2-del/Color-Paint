@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              आपके घर की सजावट का विश्वसनीय साथी। Authorized distributor for Asian Paints, Berger, Dulux, Nerolac, JSW and Indigo paints with premium hardware, tinting and wall finishes.
+              आपके घर की सजावट का विश्वसनीय साथी। Authorized distributor for Asian Paints and Birla Opus with premium computerized tinting and architectural finish warranties.
             </p>
             <div className="pt-2 text-xs text-slate-400 space-y-2.5">
               <div className="flex items-center gap-2.5">
@@ -61,11 +61,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Asian Paints Royale</a></li>
-              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Berger Silk Glamor</a></li>
-              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Dulux Velvet Touch</a></li>
-              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Nerolac Beauty Gold</a></li>
-              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">JSW Halo Elegance</a></li>
-              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Indigo Metallic Finish</a></li>
+              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Asian Paints Apcolite</a></li>
+              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Asian Paints Apex</a></li>
+              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Birla Opus Calista</a></li>
+              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Birla Opus Style</a></li>
+              <li><a href="#brands-section" className="hover:text-amber-400 transition-colors">Birla Opus Prime</a></li>
             </ul>
           </div>
 
