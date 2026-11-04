@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useStore } from '@/context/StoreContext';
 import { PaintColor } from '@/types';
+import { generateWhatsAppOrderUrl } from '@/lib/shopConfig';
 import {
   X,
   Heart,
@@ -30,6 +31,7 @@ export default function ProductDetailModal({ color }: Props) {
     setSelectedVisualizerColor,
     setIsCartOpen,
     openCheckoutModal,
+    showToast,
   } = useStore();
 
   const [packSize, setPackSize] = useState<'1L' | '4L' | '10L' | '20L'>('4L');
@@ -63,9 +65,45 @@ export default function ProductDetailModal({ color }: Props) {
   };
 
   const handleBuyNow = () => {
-    handleAddToCart();
-    closeModal();
-    setIsCartOpen(true);
+    // 1. Validate required container size
+    if (!packSize) {
+      showToast('Please select a container size before proceeding.', 'error');
+      return;
+    }
+
+    // 2. Validate valid quantity
+    if (!quantity || quantity < 1) {
+      showToast('Please select a valid quantity (minimum 1).', 'error');
+      return;
+    }
+
+    // 3. Validate product details
+    if (!color?.name || !color?.brand) {
+      showToast('Product details are missing. Please try again.', 'error');
+      return;
+    }
+
+    const totalAmount = currentPrice * quantity;
+
+    // 4. Build dynamic WhatsApp order enquiry URL
+    const whatsappUrl = generateWhatsAppOrderUrl({
+      brand: color.brand,
+      name: color.name,
+      code: color.code,
+      hex: color.hex,
+      packSize,
+      quantity,
+      unitPrice: currentPrice,
+      totalAmount,
+    });
+
+    // 5. Provide instant user feedback
+    showToast('Redirecting to WhatsApp to place your order...', 'info');
+
+    // 6. Directly open WhatsApp in a new tab / mobile deep link
+    if (typeof window !== 'undefined') {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   const handleTestInVisualizer = () => {
