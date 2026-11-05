@@ -3,6 +3,7 @@
 import React from 'react';
 import { Palette, Phone, Mail, MapPin } from 'lucide-react';
 import { useStore } from '@/context/StoreContext';
+import { SHOP_CONFIG } from '@/lib/shopConfig';
 
 export default function Footer() {
   const { openConsultationModal, openCalculatorModal } = useStore();
@@ -57,7 +58,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <a
-                    href="https://maps.app.goo.gl/uWSUt5iGd2QwmSJG7?g_st=aw"
+                    href={SHOP_CONFIG.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-amber-400 transition-colors leading-relaxed block"

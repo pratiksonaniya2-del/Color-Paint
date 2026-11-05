@@ -203,31 +203,15 @@ export default function StoreLocationSection() {
               </div>
             </div>
 
-            {/* Map Preview Frame */}
-            <div className="relative flex-1 min-h-[260px] bg-slate-100 flex flex-col items-center justify-center p-6 text-center group">
-              {/* Stylized Map Backdrop Graphic */}
-              <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px]" />
-
-              <div className="relative z-10 flex flex-col items-center max-w-xs">
-                {/* Pulsating Map Pin Icon */}
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
-                    <MapPin className="w-8 h-8" />
-                  </div>
-                  <span className="absolute -inset-1 rounded-full bg-amber-400/30 animate-ping -z-10" />
-                </div>
-
-                <span className="text-sm font-extrabold text-slate-900 block">
-                  आशीर्वाद हार्डवेयर एंड पेंट हाउस
-                </span>
-                <span className="text-xs text-slate-500 mt-1 block">
-                  Click the button below to get exact directions via Google Maps application.
-                </span>
-
-                <div className="mt-4 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-[11px] font-mono text-slate-600 shadow-2xs">
-                  maps.app.goo.gl/uWSUt5iGd2QwmSJG7
-                </div>
-              </div>
+            {/* Map Preview Frame with Live Interactive Google Map Embed */}
+            <div className="relative flex-1 min-h-[300px] w-full bg-slate-100 overflow-hidden">
+              <iframe
+                title="Google Maps Location - Aashirwad Hardware and Paint House"
+                src="https://maps.google.com/maps?q=Aashirwad%20Hardware%20and%20Paint%20House&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full min-h-[300px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
             {/* Direction Action Buttons */}
@@ -239,12 +223,12 @@ export default function StoreLocationSection() {
                 className="w-full py-3.5 px-4 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-amber-600/20 transition-all hover:scale-[1.01]"
               >
                 <Navigation className="w-4 h-4" />
-                <span>Get Directions on Google Maps</span>
+                <span>Open in Google Maps / दिशा निर्देश देखें</span>
                 <ExternalLink className="w-3.5 h-3.5 opacity-80" />
               </a>
 
               <p className="text-[11px] text-center text-slate-400">
-                Opens in Google Maps App or Web Browser
+                Turn-by-turn GPS navigation available on all devices
               </p>
             </div>
           </div>

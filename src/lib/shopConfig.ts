@@ -6,7 +6,9 @@ export const SHOP_CONFIG = {
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919669348842',
   email: 'raisatyam78@gmail.com',
   tagline: 'आपके घर की सजावट का विश्वसनीय साथी',
-  googleMapsUrl: 'https://maps.app.goo.gl/uWSUt5iGd2QwmSJG7?g_st=aw',
+  googleMapsUrl:
+    process.env.NEXT_PUBLIC_MAPS_URL ||
+    'https://www.google.com/maps/search/?api=1&query=Aashirwad+Hardware+and+Paint+House',
   address: {
     shopName: 'आशीर्वाद हार्डवेयर एंड पेंट हाउस',
     subtitle: 'Aashirwad Hardware & Paint House',
