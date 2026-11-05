@@ -20,8 +20,13 @@ export const metadata: Metadata = {
   description:
     'आशीर्वाद हार्डवेयर एंड पेंट हाउस - आपके घर की सजावट का विश्वसनीय साथी। Premium paints from Asian Paints & Birla Opus. Contact: 9669348842, raisatyam78@gmail.com.',
   icons: {
-    icon: '/aashirwad-logo.jpg',
-    apple: '/aashirwad-logo.jpg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png', type: 'image/png' },
+      { url: '/aashirwad-logo.jpg', type: 'image/jpeg' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/icon-192.png',
   },
 };
 

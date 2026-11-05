@@ -27,6 +27,7 @@ export default function Navbar() {
     setIsCartOpen,
     openCalculatorModal,
     openProductModal,
+    navigateToWishlist,
   } = useStore();
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -286,15 +287,16 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-end gap-1.5 sm:gap-2">
-            <Link
-              href="#colours-section"
+            <button
+              type="button"
+              onClick={navigateToWishlist}
               aria-label={`Saved shades${
                 wishlist.length
                   ? `, ${wishlist.length} saved`
                   : ""
               }`}
               title="Saved shades"
-              className="relative grid h-10 w-10 shrink-0 place-items-center rounded-xl text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950"
+              className="relative grid h-10 w-10 shrink-0 place-items-center rounded-xl text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950 cursor-pointer"
             >
               <Heart
                 className="h-[19px] w-[19px]"
@@ -306,7 +308,7 @@ export default function Navbar() {
                   {wishlist.length > 9 ? "9+" : wishlist.length}
                 </span>
               )}
-            </Link>
+            </button>
 
             <button
               type="button"
@@ -459,6 +461,25 @@ export default function Navbar() {
             >
               Explore colours
             </a>
+
+            <button
+              type="button"
+              onClick={() => {
+                closeMobileMenu();
+                navigateToWishlist();
+              }}
+              className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-medium text-rose-700 bg-rose-50/70 transition-colors hover:bg-rose-100/70 cursor-pointer"
+            >
+              <div className="flex items-center gap-2">
+                <Heart className="h-4 w-4 fill-rose-500 text-rose-500" />
+                <span>Liked Shades</span>
+              </div>
+              {wishlist.length > 0 && (
+                <span className="rounded-full bg-rose-600 px-2 py-0.5 text-[10px] font-bold text-white">
+                  {wishlist.length}
+                </span>
+              )}
+            </button>
 
             <a
               href="#inspiration-section"

@@ -55,6 +55,9 @@ interface StoreContextType {
   inspirations: InspirationItem[];
   cart: CartItem[];
   wishlist: string[];
+  showWishlistOnly: boolean;
+  setShowWishlistOnly: (show: boolean) => void;
+  navigateToWishlist: () => void;
   orders: Order[];
   inquiries: ConsultationInquiry[];
   isCartOpen: boolean;
@@ -139,6 +142,17 @@ export function StoreProvider({
   const [cart, setCart] = useState<CartItem[]>([]);
   const [wishlist, setWishlist] =
     useState<string[]>(["ivory-mist", "terracotta"]);
+  const [showWishlistOnly, setShowWishlistOnly] = useState(false);
+
+  const navigateToWishlist = () => {
+    setShowWishlistOnly(true);
+    if (typeof window !== "undefined") {
+      const el = document.getElementById("colours-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const [orders, setOrders] =
     useState<Order[]>(INITIAL_ORDERS);
@@ -867,6 +881,9 @@ export function StoreProvider({
         cartItemsCount,
         toggleWishlist,
         isWishlisted,
+        showWishlistOnly,
+        setShowWishlistOnly,
+        navigateToWishlist,
         bookConsultation,
         placeOrder,
         updateOrderStatus,
