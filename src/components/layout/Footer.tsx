@@ -51,6 +51,24 @@ export default function Footer() {
                   raisatyam78@gmail.com
                 </a>
               </div>
+              <div className="flex items-start gap-2.5">
+                <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
+                  <MapPin className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <a
+                    href="https://maps.app.goo.gl/uWSUt5iGd2QwmSJG7?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors leading-relaxed block"
+                  >
+                    <span>Main Road / मुख्य बाज़ार मार्ग</span>
+                    <span className="block text-[11px] text-amber-400 font-semibold mt-0.5">
+                      Open on Google Maps ↗
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -79,6 +97,7 @@ export default function Footer() {
               <li><button onClick={openCalculatorModal} className="hover:text-amber-400 transition-colors">Paint Quantity Calculator</button></li>
               <li><button onClick={openConsultationModal} className="hover:text-amber-400 transition-colors">Free Home Consultation</button></li>
               <li><a href="#inspiration-section" className="hover:text-amber-400 transition-colors">Room Palette Ideas</a></li>
+              <li><a href="#store-location" className="hover:text-amber-400 transition-colors font-semibold text-amber-400">Store Location &amp; Directions</a></li>
             </ul>
           </div>
 

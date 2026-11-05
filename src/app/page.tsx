@@ -9,6 +9,7 @@ import ColourExplorer from '@/components/colours/ColourExplorer';
 import RoomVisualizer from '@/components/visualizer/RoomVisualizer';
 import InspirationGallery from '@/components/gallery/InspirationGallery';
 import ShadeCardsSection from '@/components/home/ShadeCardsSection';
+import StoreLocationSection from '@/components/home/StoreLocationSection';
 import Footer from '@/components/layout/Footer';
 import { PaintBrand } from '@/types';
 
@@ -48,6 +49,9 @@ export default function HomePage() {
 
         {/* 7. Inspiration Gallery (bottom-left mockup) */}
         <InspirationGallery />
+
+        {/* 8. Store Location & Address (Above Footer) */}
+        <StoreLocationSection />
       </main>
 
       {/* Footer */}

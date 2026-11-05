@@ -6,6 +6,14 @@ export const SHOP_CONFIG = {
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919669348842',
   email: 'raisatyam78@gmail.com',
   tagline: 'आपके घर की सजावट का विश्वसनीय साथी',
+  googleMapsUrl: 'https://maps.app.goo.gl/uWSUt5iGd2QwmSJG7?g_st=aw',
+  address: {
+    shopName: 'आशीर्वाद हार्डवेयर एंड पेंट हाउस',
+    subtitle: 'Aashirwad Hardware & Paint House',
+    landmark: 'Authorized Asian Paints & Birla Opus Paint Studio',
+    area: 'Main Road / मुख्य बाज़ार मार्ग',
+    timings: 'Monday – Sunday: 8:30 AM – 9:00 PM',
+  },
 } as const;
 
 export interface WhatsAppOrderDetails {

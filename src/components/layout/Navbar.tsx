@@ -409,6 +409,13 @@ export default function Navbar() {
             >
               Shade Cards
             </a>
+
+            <a
+              href="#store-location"
+              className={navLinkClass}
+            >
+              Store Location
+            </a>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -502,6 +509,14 @@ export default function Navbar() {
               <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-amber-900">
                 5 PDFs
               </span>
+            </a>
+
+            <a
+              href="#store-location"
+              onClick={closeMobileMenu}
+              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 transition-colors hover:bg-slate-50"
+            >
+              Store Location &amp; Directions
             </a>
 
             <div className="mt-4 pt-3 border-t border-slate-200/80 space-y-2">
